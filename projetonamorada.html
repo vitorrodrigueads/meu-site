@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nossa História de Amor</title>
+  <link rel="stylesheet" href="projetonamorada.css" />
+</head>
+<body>
+
+  <h1>Nossa História de Amor</h1>
+
+  <div class="timeline">
+    <div class="event">
+  <span class="heart-icon" aria-label="Coração pulsante" role="img">❤️</span>
+      <h2>Primeiro Encontro - 21/06/2024</h2>
+      <p>Lembro como se fosse ontem... Eu, todo nervoso, indo te ver com o braço enfaixado kkkk. De certa forma, isso até foi bom, porque puxei assunto com você sobre isso e conseguimos conversar por bastante tempo, sem o papo morrer. Lembro que dei uma volta maior até chegar na praça, só pra criar coragem. Mas, quando te vi, meu coração acelerou ainda mais. Seu olhar me encantou de uma forma absurda, e eu fiquei todo sem jeito. Sinto que, daquele dia em diante, algo mudou em mim. Mal sabia eu que, naquele momento, estava olhando para a pessoa mais incrível que eu conheceria nesse mundo. Infelizmente, não temos fotos desse dia... Mas pode ter certeza de que vou me lembrar dele pelo resto da minha vida.</p>
+    </div>
+    <div class="event">
+         <span class="heart-icon" aria-label="Coração pulsante" role="img">❤️</span>
+      <h2>Primeira Viagem - 13/09/2024</h2>
+      <img src="imagens/primeiraviagem.png" alt="Foto da viagem">
+      <p>Nossa primeira viagem... Foi incrível! A gente riu, se divertiu muito, e ainda por cima era meu aniversário — então foi o melhor presente passar aquele final de semana ao seu lado. Fizemos várias coisas: fomos na cachoeira, entramos no mar, e até corremos de marimbondos tentando atacar a gente. Lembra disso? Kkkkkk. Aquele cara caindo nas pedras enquanto a gente admirava o mar foi muito engraçado, a gente riu demais! Mal sabíamos que logo depois teríamos que correr pelas nossas vidas por causa dos marimbondos kkkkkk. Quando a gente viu, estava todo mundo da praia correndo deles. Lembro que a gente falava todo dia que ia acordar às 5h da manhã pra ver o sol nascer... Mas nunca acordava! Enfim, foram dias perfeitos e inesquecíveis.</p>
+    </div>
+    <div class="event">
+        <span class="heart-icon" aria-label="Coração pulsante" role="img">❤️</span>
+      <h2>Dia Especial - 28/07/2024</h2>
+      <div class="img-dupla">
+        <img src="imagens/dia especial.png" alt="Foto 1">
+        <img src="imagens/dia especial02.png" alt="Foto 2">
+      </div>
+      <p>Um momento que ficará para sempre em nossos corações foi quando eu te entreguei o primeiro buquê de flores. Lembro que foi no nosso primeiro mês de namoro, e você tinha me dito que tinha o sonho de ganhar um buquê de flores. Então, fui lá e te entreguei um logo nesse dia especial. E você fez uma cesta cheia de doces e com fotos nossas — foi incrível! Nunca tinha recebido nada parecido de ninguém, e eu fiquei muito feliz... Depois acabei comendo todos os doces kkkkk (estavam muito bons!). Você também gostou muito da surpresa das flores. Mal sabia você que, mais pra frente, eu te daria outro buquê — só que dessa vez seria para sempre, porque foi feito de cetim. Passei a madrugada toda fazendo ele, mas valeu muito a pena só pra ver aquele seu sorriso quando viu o buquê... e as alianças.</p>
+    </div>
+  </div>
+
+ 
+
+  <div class="balao-container">
+    <div class="balao-polaroid">
+      <img src="imagens/balão-Photoroom.png" class="balao" alt="Balão">
+      <div class="corda"></div>
+      <div class="polaroid">
+        <img src="imagens/polaroid.png" alt="Foto Polaroid">
+      </div>
+    </div>
+  </div>
+
+   <div class="balao-container esquerda">
+  <div class="balao-polaroid">
+    <img src="imagens/balão-Photoroom.png" class="balao" alt="Balão">
+    <div class="corda"></div>
+    <div class="polaroid">
+      <img src="imagens/polaroid02.png" alt="Foto Polaroid 2">
+    </div>
+  </div>
+</div>
+
+
+  <div id="contador-namoro" class="contador">
+  <h2>Tempo Juntos</h2>
+  <div id="tempo"></div>
+</div>
+
+  <div id="heart-container"></div>
+
+  <div class="envelope" onclick="mostrarMensagem()">
+    💌
+  </div>
+
+  <div class="mensagem-surpresa" id="mensagem">
+    Você é o melhor presente que a vida me deu 💖
+  </div>
+
+  <h2 class="titulo-galeria">Galeria de Momentos</h2>
+<div class="galeria">
+  <img src="imagens/momentos.png" alt="Foto 0" class="miniatura" data-index="0" />
+  <img src="imagens/momentos02.png" alt="Foto 2" class="miniatura" data-index="2" />
+  <img src="imagens/momentos03.png" alt="Foto 3" class="miniatura" data-index="3" />
+<img src="imagens/momentos04.png" alt="Foto 4" class="miniatura" data-index="4" />
+<img src="imagens/momentos05.png" alt="Foto 5" class="miniatura" data-index="5" />
+
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="fechar" id="fechar">&times;</span>
+  <img class="imagem-grande" id="imagem-grande" src="" alt="Foto grande" />
+  <div class="navegacao">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+</div>
+
+
+<section id="quiz">
+  <h2>💘 Quiz do Amor 💘</h2>
+  <div id="quiz-container"></div>
+  <button id="next-btn">Próxima</button>
+  <p id="resultado"></p>
+</section>
+
+<div id="puzzle-wrapper">
+  <div>
+    <h1 style="text-align: center;">Quebra-cabeça Secreto</h1>
+    <div style="text-align: center;">
+      <button id="btn-embaralhar">Embaralhar</button>
+    </div>
+    <div id="puzzle-container"></div>
+  </div>
+</div>
+
+<div id="surpresa" class="hidden">
+  <div class="caixa">
+    <h2>Parabéns, amor! 🧩❤️</h2>
+    <p>Você completou o quebra-cabeça e desbloqueou um presente secreto!</p>
+    <img src="imagens/gloss-Photoroom.png" alt="Presente Secreto" style="max-width: 100%; margin-top: 15px;" />
+    <br />
+    <button id="fechar-surpresa">Fechar</button>
+  </div>
+</div>
+
+
+  <script>
+    function mostrarMensagem() {
+      const msg = document.getElementById('mensagem');
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 4000);
+    }
+
+  window.addEventListener('scroll', function () {
+  const balaoContainers = document.querySelectorAll('.balao-container');
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.offsetHeight;
+
+  balaoContainers.forEach(balaoContainer => {
+    if (scrollY + windowHeight >= bodyHeight - 1000) {
+      balaoContainer.style.opacity = '0';
+    } else {
+      balaoContainer.style.opacity = '1';
+    }
+  });
+});
+
+
+    function animaEventos() {
+      const eventos = document.querySelectorAll('.event');
+      const triggerBottom = window.innerHeight * 0.85;
+
+      eventos.forEach(evento => {
+        const eventoTop = evento.getBoundingClientRect().top;
+
+        if (eventoTop < triggerBottom) {
+          evento.classList.add('show');
+        } else {
+          evento.classList.remove('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animaEventos);
+    window.addEventListener('load', animaEventos);
+
+    // 💖 CÓDIGOS PARA OS CORAÇÕES CAINDO
+    function criarCoracao() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      document.getElementById('heart-container').appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(criarCoracao, 300);
+
+    function atualizarContador() {
+  const dataInicio = new Date('2024-06-28T00:00:00'); 
+  const agora = new Date();
+
+  const diff = agora - dataInicio; // diferença em ms
+
+  const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diff / (1000 * 60)) % 60);
+  const segundos = Math.floor((diff / 1000) % 60);
+
+  const tempoDiv = document.getElementById('tempo');
+  tempoDiv.textContent = `${dias} dias, ${horas}h ${minutos}m ${segundos}s`;
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
+
+
+const imagens = [
+  'imagens/momentos.png',
+  'imagens/momentos02.png',
+  'imagens/momentos03.png',
+  'imagens/momentos04.png',
+  'imagens/momentos05.png',
+];
+
+const lightbox = document.getElementById('lightbox');
+const imagemGrande = document.getElementById('imagem-grande');
+const fecharBtn = document.getElementById('fechar');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let indiceAtual = 0;
+
+function abrirLightbox(index) {
+  indiceAtual = index;
+  imagemGrande.src = imagens[indiceAtual];
+  lightbox.classList.add('show');
+}
+
+function fecharLightbox() {
+  lightbox.classList.remove('show');
+}
+
+function mostrarAnterior() {
+  indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+  imagemGrande.src = imagens[indiceAtual];
+}
+
+function mostrarProximo() {
+  indiceAtual = (indiceAtual + 1) % imagens.length;
+  imagemGrande.src = imagens[indiceAtual];
+}
+
+document.querySelectorAll('.miniatura').forEach((img, idx) => {
+  img.addEventListener('click', () => abrirLightbox(idx));
+});
+
+fecharBtn.addEventListener('click', fecharLightbox);
+
+prevBtn.addEventListener('click', mostrarAnterior);
+nextBtn.addEventListener('click', mostrarProximo);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) fecharLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('show')) return;
+
+  if (e.key === 'ArrowLeft') {
+    mostrarAnterior();
+  } else if (e.key === 'ArrowRight') {
+    mostrarProximo();
+  } else if (e.key === 'Escape') {
+    fecharLightbox();
+  }
+});
+
+
+const quizData = [
+  {
+    pergunta: "Onde foi nosso primeiro encontro?",
+    opcoes: ["No shopping", "Na Praça", "Na pizzaria"],
+    correta: "Na Praça"
+  },
+  {
+    pergunta: "O Que você fez depois do nosso primeiro beijo?",
+    opcoes: ["me abraçou", "Sorriu", "Saiu Correndo"],
+    correta: "Saiu Correndo"
+  },
+  {
+    pergunta: "Qual foi nossa primeira viagem?",
+    opcoes: ["Praia", "Fazenda", "Cidade vizinha"],
+    correta: "Praia"
+  },
+
+  {
+    pergunta: "Qual foi o nosso primiero assunto?",
+    opcoes: ["Onde Estuda", "Tesla e um lixo", "quantos anos tem"],
+    correta: "Tesla e um lixo"
+  },
+
+   {
+    pergunta: "O Que eu fiz para você no seu Aniversário?",
+    opcoes: ["Te dei um presente", "Fiz nada", "Fiz uma festa Surpresa"],
+    correta: "Fiz uma festa Surpresa"
+  }
+];
+
+let index = 0;
+let acertos = 0;
+
+const container = document.getElementById("quiz-container");
+const resultado = document.getElementById("resultado");
+const btnProximo = document.getElementById("next-btn");
+
+function carregarPergunta() {
+  resultado.textContent = "";
+  const questao = quizData[index];
+  container.innerHTML = `
+    <div class="question">${questao.pergunta}</div>
+    <div class="options">
+      ${questao.opcoes.map(opcao => `<button>${opcao}</button>`).join("")}
+    </div>
+  `;
+
+  document.querySelectorAll(".options button").forEach(btn => {
+    btn.onclick = () => {
+      if (btn.textContent === questao.correta) {
+        acertos++;
+        resultado.textContent = "💖 Isso mesmo, meu amor!";
+      } else {
+        resultado.textContent = "😅 Ops... você errou, mas tá tudo bem!";
+      }
+      btnProximo.style.display = "inline-block";
+    };
+  });
+}
+
+btnProximo.onclick = () => {
+  index++;
+  btnProximo.style.display = "none";
+  if (index < quizData.length) {
+    carregarPergunta();
+  } else {
+    container.innerHTML = "";
+    resultado.innerHTML = `🎉 Fim do quiz! Você acertou <strong>${acertos}</strong> de ${quizData.length} perguntas.`;
+  }
+};
+
+carregarPergunta(); //dadas*//
+
+   // Mesma lógica do seu script que já funciona
+    const puzzleGrid = document.getElementById('puzzle-container');
+    const rows = 4;
+    const cols = 4;
+    const total = rows * cols;
+
+    function criarPecas() {
+      puzzleGrid.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const slot = document.createElement('div');
+        slot.classList.add('slot');
+        slot.dataset.correct = i;
+
+        const piece = document.createElement('div');
+        piece.classList.add('piece');
+        piece.draggable = true;
+        piece.id = `piece-${i}`;
+        piece.dataset.index = i;
+
+        const x = (i % cols) * (500 / cols);
+        const y = Math.floor(i / cols) * (500 / rows);
+        piece.style.backgroundPosition = `-${x}px -${y}px`;
+
+        slot.appendChild(piece);
+        puzzleGrid.appendChild(slot);
+      }
+      ativarDragDrop();
+    }
+
+    function embaralhar() {
+      const pieces = Array.from(document.querySelectorAll('.piece'));
+      const slots = Array.from(document.querySelectorAll('.slot'));
+
+      slots.forEach(slot => slot.innerHTML = '');
+
+      pieces.sort(() => Math.random() - 0.5);
+
+      pieces.forEach((piece, i) => slots[i].appendChild(piece));
+
+      // Esconder tela surpresa ao embaralhar
+      document.getElementById('surpresa').classList.add('hidden');
+    }
+
+    function ativarDragDrop() {
+      let draggedPiece = null;
+
+      document.querySelectorAll('.piece').forEach(piece => {
+        piece.addEventListener('dragstart', e => {
+          draggedPiece = e.target;
+          e.dataTransfer.setData('text/plain', e.target.id);
+        });
+      });
+
+      document.querySelectorAll('.slot').forEach(slot => {
+        slot.addEventListener('dragover', e => e.preventDefault());
+
+        slot.addEventListener('drop', e => {
+          e.preventDefault();
+          const data = e.dataTransfer.getData('text/plain');
+          const droppedPiece = document.getElementById(data);
+
+          if (slot.firstChild) {
+            const currentPiece = slot.firstChild;
+            const draggedParent = draggedPiece.parentNode;
+
+            slot.replaceChild(draggedPiece, currentPiece);
+            draggedParent.appendChild(currentPiece);
+          } else {
+            slot.appendChild(droppedPiece);
+          }
+
+          verificarVitoria();
+        });
+      });
+    }
+
+    function mostrarPresente() {
+      document.getElementById('surpresa').classList.remove('hidden');
+    }
+
+    function verificarVitoria() {
+      const slots = document.querySelectorAll('.slot');
+      const completo = Array.from(slots).every((slot, i) => {
+        const piece = slot.firstChild;
+        return piece && Number(piece.dataset.index) === i;
+      });
+
+      if (completo) {
+        mostrarPresente();
+      }
+    }
+
+    window.onload = () => {
+      criarPecas();
+      embaralhar();
+
+      // Garantir que a tela surpresa está oculta no início
+      document.getElementById('surpresa').classList.add('hidden');
+
+      // Botão fechar tela surpresa
+      document.getElementById('fechar-surpresa').onclick = () => {
+        document.getElementById('surpresa').classList.add('hidden');
+      };
+
+      // Botão embaralhar
+      document.getElementById('btn-embaralhar').onclick = embaralhar;
+    };
+
+
+  </script>
+</body>
+</html>
